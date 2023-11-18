@@ -40,6 +40,20 @@ app.get("/",(req,res)=>{
 
 
 
+//add customer
+
+app.post("/add",(req,res)=>{
+
+    const newCustomer = req.body;
+    customer.push(newCustomer);
+
+    console.log(newCustomer)
+
+    return res.status(201).send({message: "customer added "})
+
+
+})
+
 
 
 
